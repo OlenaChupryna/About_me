@@ -1,0 +1,214 @@
+* {
+   padding: 0;
+   margin: 0; 
+}
+
+body {
+   background: gray;
+   font-family: "Times New Roman";
+}
+
+header, .center, footer {
+   border-radius: 10px;
+   margin: 0 auto;
+   background-color: white;
+   width: 100%;
+   min-width: 550px;
+ 
+}
+
+header {
+   position: relative;   
+}
+
+.center {
+   min-height: 160px;
+   border: solid 1px white; 
+   
+}
+
+footer {
+  height: 50px;
+  padding: 10px 0 0 0;
+  box-sizing: border-box;
+  text-align: center; 
+}
+
+aside {
+   margin: 10px 10px 0;
+   padding: 5px;
+   border-radius: 5px;
+   background-color: silver;
+   font-family: Arial;
+   font-size: 14px;   
+}   
+
+main, #test {
+   padding: 10px;
+   text-align: justify;
+}
+
+h1 {
+   font-size: xx-large;
+   text-align: center;  
+}
+
+#logo {
+   height: 44px;
+   position: absolute;
+   top: 50%;
+   margin-top: -22px;
+   left: 5px;
+}
+   
+p, dd {
+   text-align: justify;
+   text-indent: 30px;
+}
+
+p:not(.aside), dd {
+   font-size: medium;   
+}
+   
+a:link, a:visited {
+   color: blue;
+}
+
+h3:not(.aside) {
+   padding-top: 25px;
+}
+
+h3.aside {
+   padding-top: 5px;
+}
+
+.hrefUp {
+   position: fixed;
+   bottom: 10px;
+   left: 5px;
+   border: solid 2px orange;
+   border-radius: 5px;
+   background:white;
+   z-index: 5;
+}
+
+table {
+   padding-top: 10px;
+   text-align: center;
+   margin: 0 auto;
+   border-spacing: 2px;
+}
+
+#calculatorWindow {
+   height: 30px;
+   width: 207px;
+   border: solid .5px hsl(0, 0%, 65%);
+   background-color: white;
+}
+
+button {
+   height: 30px;
+   width: 40px;   
+}
+
+button#equalSign {
+   height: 62px;
+}
+
+button#zero {
+   width: 82px;
+}
+
+div.testQuestion {
+   width: 100%;
+   box-sizing: border-box;
+   border: solid 2px black;
+   padding: 3px 2px;
+   border-radius: 5px;  
+}
+
+button#testSubmit {
+   clear: both;
+   width: auto;   
+   height: auto;
+   margin: 10px auto 0px;
+   display: block;  
+}
+
+li {
+   list-style-type: none;
+   text-align: center;   
+}
+
+ul.level1 {
+   width: 267px;
+   margin: 0 auto;
+}
+
+li.level1 {
+   float: left;
+   margin: 0 2px;
+   position: relative;
+}
+
+li ul {
+   display: none;
+   position: absolute;
+   background-color: white;
+   padding: 5px;
+   z-index: 5;
+}
+
+li:hover ul {
+   display: block;
+   border-radius: 3px;
+   border: solid 2px black;
+   border-radius: 5px;
+}
+
+.clear::after {
+   content: ""; 
+   display: block; 
+   clear: both;
+}
+
+/*ul.level1 {
+   text-align: center;
+}
+
+li.level1 {
+   display: inline-block;
+   margin: 0 2px;
+}
+*/
+
+
+@media (min-width: 992px) {
+   
+   header, .center, footer {
+      border-radius: 10px;
+      background-color: white;
+      margin: 0px auto;
+      max-width: 1000px;
+      min-width: 992px;
+      width: 100%;
+   }   
+   
+   aside {
+      width: 300px;
+      float: right;
+   }  
+   
+   p:not(.aside), dd {
+      font-size: medium;   
+   }
+   
+   .hrefUp {
+      display: none;
+   }
+   
+   div.testQuestion {
+      width: 20%;
+      float: left;
+   }   
+}
